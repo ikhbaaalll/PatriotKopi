@@ -42,48 +42,48 @@
                 <img class="mx-auto"src="{{ asset('assets/image/symbol.png') }}" alt="" height="200">
             </div>
         </div>
-        <div class="col-md-9 col-sm-12 align-self-center">
+        <div class="col-md-9 col-sm-12 align-self-center my-4">
             <div class="row mt-3">
                 <h3 class="text-center mx-auto">WHAT IS PATRIOT KOPI ?
                 </h3>
             </div>
             <div class="row mt-2">
-                <h6 class="mx-auto w-75">PATRIOT KOPI is a recommender system website by using
+                <h6 class="mx-auto w-75" style="line-height: 2;">PATRIOT KOPI is a recommender system website by using
                     content-based method. Patriot Kopi provides information of Coffee Shop in Bekasi City (West Bekasi,
                     South Bekasi, North Bekasi and East Bekasi). This website was created so that users can choose a coffee
                     shop that fits the user's criteria.
                 </h6>
             </div>
-            <div class="row">
+            <div class="row mt-4">
                 <h3 class="text-center mx-auto mt-4">THE INTENTIONS
                 </h3>
             </div>
-            <div class="row mt-2">
-                <h6 class="mx-auto w-75">Users can get results from this recommendation system if the input that the user
+            <div class="row mt-2 mb-5">
+                <h6 class="mx-auto w-75" style="line-height: 2;">Users can get results from this recommendation system if
+                    the input that the user
                     provides is in accordance with the coffee shop data contained in this website. Coffee shop data on this
                     website is still limited due to survey limitations.
                 </h6>
             </div>
         </div>
     </div>
-    <div class="row" style="background: rgb(102, 88, 70); back" id="contact">
+    <div class="row pt-3" style="background: rgb(102, 88, 70); back" id="contact">
         <h2 class="text-center mx-auto" style="color: #4F391C;">CONTACT</h2>
     </div>
-    <div class="row justify-content-around pb-4" style="background: rgb(102, 88, 70);">
-        <a href="https://www.instagram.com/tntbeautyofficial/"
-            class="d-flex my-3 align-items-center flex-column text-dark text-decoration-none">
+    <div class="row justify-content-around py-5" style="background: rgb(102, 88, 70);">
+        <a href="https://www.google.co.id/maps/@-6.2733712,106.9130459,12z"
+            class="d-flex my-3 align-items-center flex-column text-decoration-none">
             <img class="text-center"src="{{ asset('assets/image/home.png') }}" alt="" height="40">
-            <h5 class="mt-4 text-center" style="color: #4F391C;">Kota Bekasi, Jawa Barat, Indonesia</h5>
+            <h5 class="mt-4 text-center" style="color: #000;">Kota Bekasi, Jawa Barat, Indonesia</h5>
         </a>
         <a href="https://api.whatsapp.com/send?phone=6285692349901"
-            class="d-flex my-3 align-items-center flex-column text-dark text-decoration-none">
+            class="d-flex my-3 align-items-center flex-column text-decoration-none">
             <img src="{{ asset('assets/image/phone.png') }}" alt="" height="40">
-            <h5 class="mt-4 text-center" style="color: #4F391C;">(+62) 85692349901</h5>
+            <h5 class="mt-4 text-center" style="color: #000;">(+62) 85692349901</h5>
         </a>
-        <a href="mailto:Rizkamillens@gmail.com"
-            class="d-flex my-3 align-items-center flex-column text-dark text-decoration-none">
+        <a href="mailto:Rizkamillens@gmail.com" class="d-flex my-3 align-items-center flex-column text-decoration-none">
             <img src="{{ asset('assets/image/mail.png') }}" alt="" height="40">
-            <h5 class="mt-4 text-center" style="color: #4F391C;">Rizkamillens@gmail.com</h5>
+            <h5 class="mt-4 text-center" style="color: #000;">Rizkamillens@gmail.com</h5>
         </a>
     </div>
 @endsection

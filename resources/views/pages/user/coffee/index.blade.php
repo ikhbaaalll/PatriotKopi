@@ -34,6 +34,7 @@
                 <table class="table table-bordered">
                     <thead>
                         <tr class="table-light">
+                            <th scope="col">Foto</th>
                             <th scope="col">Bagian</th>
                             <th scope="col">Nama</th>
                             <th scope="col">Konsep</th>
@@ -46,13 +47,16 @@
                     <tbody>
                         @foreach ($coffees as $coffee)
                             <tr class="table-light">
+                                <th><img src="{{ $coffee->image }}" alt="Image" class="img-thumbnail"></th>
                                 <th scope="row">{{ $coffee->bekasi_section }}</th>
                                 <td>{{ $coffee->name }}</td>
                                 <td>{{ $coffee->concept }}</td>
                                 <td>{{ $coffee->start }} - {{ $coffee->end }}</td>
                                 <td class="text-center">{{ number_format($coffee->price, 2) }}</td>
-                                <td><a href="{{ $coffee->place }}" class="text-decoration-none">Lokasi</a></td>
-                                <td><a href="{{ $coffee->instagram }}" class="text-decoration-none">Instagram</a></td>
+                                <td><a href="{{ $coffee->place }}" class="badge badge-secondary">Gmaps</a></td>
+                                <td><a href="{{ $coffee->instagram }}" class="badge badge-light"><img
+                                            src="{{ asset('assets/image/ig.png') }}" height="35" width="35"
+                                            alt=""></a></td>
                             </tr>
                         @endforeach
                     </tbody>

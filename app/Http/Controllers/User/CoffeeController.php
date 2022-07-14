@@ -41,9 +41,27 @@ class CoffeeController extends Controller
                 in_array($request->bekasi_section, $section),
                 fn ($query) => $query->where('bekasi_section', $request->bekasi_section)
             )
-            ->where('price', '>=', $request->price)
+            ->when(
+                $request->price == '1',
+                fn ($query) => $query->where('price', '<', 15000),
+                fn ($query) => $query->where('price', '>=', $request->price)
+            );
+
+        if ($request->start == '1') {
+            $coffees = $coffees->whereTime('start', '>', Carbon::create(2022, 1, 1, 6)->toTimeString())
+                ->whereTime('start', '<=', Carbon::create(2022, 1, 1, 10)->toTimeString());
+        } else if ($request->start == '2') {
+            $coffees =  $coffees->whereTime('start', '>', Carbon::create(2022, 1, 1, 10)->toTimeString())
+                ->whereTime('start', '<=', Carbon::create(2022, 1, 1, 14)->toTimeString());
+        } else if ($request->start == '3') {
+            $coffees = $coffees->whereTime('start', '>', Carbon::create(2022, 1, 1, 14)->toTimeString())
+                ->whereTime('start', '<=', Carbon::create(2022, 1, 1, 18)->toTimeString());
+        } else if ($request->start == '4') {
+            $coffees = $coffees->whereTime('start', '>', Carbon::create(2022, 1, 1, 18)->toTimeString());
+        }
+
+        $coffees = $coffees
             ->where('concept', $request->concept)
-            ->whereTime('start', '>=', $request->start)
             ->when(
                 $request->end == 1,
                 fn ($query) => $query->whereTime('end', '<', Carbon::create(2022, 1, 1, 17)->toTimeString()),
