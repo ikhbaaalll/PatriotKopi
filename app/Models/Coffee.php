@@ -23,7 +23,7 @@ class Coffee extends Model
     ];
 
     protected $casts = [
-        'start:datetime:H:i',
-        'end:datetime:H:i'
+        'start' => 'datetime',
+        'end' => 'datetime'
     ];
 }

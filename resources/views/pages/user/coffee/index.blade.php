@@ -51,7 +51,7 @@
                                 <th scope="row">{{ $coffee->bekasi_section }}</th>
                                 <td>{{ $coffee->name }}</td>
                                 <td>{{ $coffee->concept }}</td>
-                                <td>{{ $coffee->start }} - {{ $coffee->end }}</td>
+                                <td>{{ $coffee->start->format('H:i') }} - {{ $coffee->end->format('H:i') }}</td>
                                 <td class="text-center">{{ number_format($coffee->price, 2) }}</td>
                                 <td><a href="{{ $coffee->place }}" class="badge badge-secondary">Gmaps</a></td>
                                 <td><a href="{{ $coffee->instagram }}" class="badge badge-light"><img
@@ -60,7 +60,7 @@
                             </tr>
                         @endforeach
                     </tbody>
-                    {{ $coffees->links() }}
+                    {{ $coffees->withQueryString()->links() }}
                 </table>
             </div>
         </div>
